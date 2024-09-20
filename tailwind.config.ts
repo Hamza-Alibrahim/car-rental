@@ -12,6 +12,13 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      lineHeight: {
+        normal: "normal",
+      },
+      boxShadow: {
+        link: "0 10px 15px 0 rgba(255,83,48,.35)",
+        "link-hover": "0 10px 15px 0 rgba(255,83,48,.5)",
+      },
     },
   },
   plugins: [],
