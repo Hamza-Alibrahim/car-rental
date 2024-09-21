@@ -23,7 +23,7 @@ const Navbar = () => {
       });
   });
   return (
-    <header className="relative max-w-[133rem] mx-auto">
+    <header className="relative max-w-[133rem] mx-auto z-50">
       <div className="absolute left-0 top-0 w-full flex justify-between items-center py-[2.7rem] px-[2rem]">
         <div className="w-[14.5rem]">
           <Link href="/">
