@@ -1,4 +1,5 @@
 import Banner from "./components/Banner";
+import Book from "./components/Book";
 import GoUp from "./components/GoUp";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -10,6 +11,7 @@ export default function Home() {
       <GoUp />
       <Navbar />
       <Hero />
+      <Book />
       <Plan />
       <Banner />
     </>

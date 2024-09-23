@@ -20,7 +20,8 @@ body {
 
 a,
 p,
-button {
+button,
+select {
   font-family: Rubik, sans-serif;
 }
 
@@ -28,4 +29,10 @@ button {
   max-width: 133rem;
   margin: 0 auto;
   padding: 0 2.5rem;
+}
+
+input::placeholder {
+  font-size: 15px;
+  font-weight: 400;
+  color: #757575;
 }

@@ -5,14 +5,14 @@ const GoUp = () => {
   const [show, setShow] = useState(false);
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      if (window.scrollY > 500 && !show) setShow(true);
-      else if (window.scrollY < 500 && show) setShow(false);
+      if (window.scrollY > window.innerHeight && !show) setShow(true);
+      else if (window.scrollY < window.innerHeight && show) setShow(false);
     });
 
     return () =>
       window.removeEventListener("scroll", () => {
-        if (window.scrollY > 500 && !show) setShow(true);
-        else if (window.scrollY < 500 && show) setShow(false);
+        if (window.scrollY > window.innerHeight && !show) setShow(true);
+        else if (window.scrollY < window.innerHeight && show) setShow(false);
       });
   });
   if (!show) return null;
@@ -24,7 +24,7 @@ const GoUp = () => {
           behavior: "smooth",
         })
       }
-      className="flex justify-center items-center cursor-pointer p-[2rem] h-[2rem] w-[2rem] text-[2.5rem] text-white bg-[#ff4d30] hover:bg-[#fa4226] border-[3px] border-white fixed bottom-[5rem] right-[5rem]"
+      className="flex justify-center items-center cursor-pointer p-[2rem] h-[2rem] w-[2rem] text-[2.2rem] text-white bg-[#ff4d30] hover:bg-[#fa4226] border-[3px] border-white fixed bottom-[2rem] right-[2rem] z-20"
     >
       {"^"}
     </span>

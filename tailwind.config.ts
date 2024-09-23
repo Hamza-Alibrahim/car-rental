@@ -18,6 +18,8 @@ const config: Config = {
       boxShadow: {
         link: "0 10px 15px 0 rgba(255,83,48,.35)",
         "link-hover": "0 10px 15px 0 rgba(255,83,48,.5)",
+        "xlink-hover": "0 10px 15px 0 rgba(255,83,48,.6)",
+        book: "0 10px 20px 0 rgba(0,0,0,.1)",
       },
     },
   },

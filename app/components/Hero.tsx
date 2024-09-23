@@ -27,7 +27,7 @@ const Hero = () => {
             </p>
             <div className="flex gap-[2rem] max-[800px]:justify-center max-[450px]:flex-col max-[450px]:items-center">
               <Link
-                className="flex items-center text-white font-bold text-[1.6rem] bg-[#ff4d30] border-2 border-[#ff4d30] rounded-[.3rem] shadow-link py-[1.8rem] px-[3rem] transition-[box-shadow,background-color] duration-300 hover:shadow-link-hover hover:bg-[#fa4226] max-[450px]:w-full max-[450px]:justify-center max-[450px]:max-w-[28rem]"
+                className="flex items-center text-white font-bold text-[1.6rem] bg-[#ff4d30] border-2 border-[#ff4d30] rounded-[.3rem] shadow-link py-[1.8rem] px-[3rem] transition-[box-shadow,background-color] duration-300 hover:shadow-xlink-hover hover:bg-[#fa4226] max-[450px]:w-full max-[450px]:justify-center max-[450px]:max-w-[28rem]"
                 href="/"
               >
                 Book Ride &nbsp;{" "}
