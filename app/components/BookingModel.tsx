@@ -1,16 +1,36 @@
 import Image from "next/image";
-import car1 from "../imgs/car1.jpg";
+import carImgs from "../carImages";
+interface Props {
+  car: string;
+  pickUpDate: string;
+  pickUpPlace: string;
+  dropOfDate: string;
+  dropOfPlace: string;
+  setShowBook: () => void;
+  setSuccess: () => void;
+}
 
-const BookingModel = () => {
+const BookingModel = ({
+  car,
+  pickUpDate,
+  pickUpPlace,
+  dropOfDate,
+  dropOfPlace,
+  setShowBook,
+  setSuccess,
+}: Props) => {
   return (
     <>
-      <div className="fixed left-0 top-0 w-screen h-screen bg-[rgba(0,0,0,.3)] z-[888]" />
-      <div className="fixed bg-white border-2 border-white text-[#010103] flex flex-col h-screen left-1/2 top-[54%] overflow-x-hidden overflow-y-scroll pr-[.2rem] -translate-x-1/2 -translate-y-1/2 w-[83rem] z-[999]">
+      <div
+        onClick={setShowBook}
+        className="fixed left-0 top-0 w-screen h-screen bg-[rgba(0,0,0,.3)] z-[888] max-md:hidden"
+      />
+      <div className="fixed bg-white border-2 border-white text-[#010103] flex flex-col h-screen left-1/2 top-[54%] overflow-x-hidden overflow-y-scroll pr-[.2rem] md:-translate-x-1/2 md:-translate-y-1/2 w-full max-w-[83rem] max-md:top-0 max-md:left-0 z-[999]">
         <div className="flex items-center justify-between bg-[#ff4d30] text-white py-[1rem] px-[1.5rem]">
           <h1 className="text-[2.4rem] uppercase font-bold leading-normal">
             Complete Reservation
           </h1>
-          <span className="cursor-pointer">
+          <span onClick={setShowBook} className="cursor-pointer">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -55,8 +75,8 @@ const BookingModel = () => {
             toll-free customer support number.
           </h4>
         </div>
-        <div className="grid grid-cols-2 p-[3rem] border-b border-[#7878789f]">
-          <div className="flex flex-col gap-[3.2rem]">
+        <div className="grid grid-cols-2 max-sm:grid-cols-1 p-[3rem] border-b border-[#7878789f]">
+          <div className="flex flex-col max-sm:items-center gap-[3.2rem]">
             <div className="flex flex-col gap-[2rem]">
               <h5 className="text-[#ff4d30] text-[1.8rem] font-bold leading-normal">
                 Location &amp; Date
@@ -85,7 +105,7 @@ const BookingModel = () => {
                     Pick-Up Date &amp; Time
                   </h6>
                   <h5 className="text-[1.6rem] text-[#777] leading-normal">
-                    2024-09-03 /{" "}
+                    {pickUpDate} /{" "}
                     <input
                       type="time"
                       className="border border-[#767676] rounded-sm text-[1.4rem] text-black"
@@ -118,7 +138,7 @@ const BookingModel = () => {
                   Drop-Off Date &amp; Time
                 </h6>
                 <h5 className="text-[1.6rem] text-[#777] leading-normal">
-                  2024-09-06 /{" "}
+                  {dropOfDate} /{" "}
                   <input
                     type="time"
                     className="border border-[#767676] rounded-sm text-[1.4rem] text-black"
@@ -150,7 +170,7 @@ const BookingModel = () => {
                   Pick-Up Location
                 </h6>
                 <h5 className="text-[1.6rem] text-[#777] leading-normal">
-                  Novi Sad
+                  {pickUpPlace}
                 </h5>
               </div>
             </div>
@@ -178,16 +198,16 @@ const BookingModel = () => {
                   Drop-Off Location
                 </h6>
                 <h5 className="text-[1.6rem] text-[#777] leading-normal">
-                  Novi Sad
+                  {dropOfPlace}
                 </h5>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-[3rem]">
+          <div className="flex flex-col max-sm:items-center max-sm:mt-[3.5rem] gap-[3rem]">
             <h5 className="text-[1.8rem] leading-normal font-bold">
-              Car - <span className="text-[#ff4d30]">Audi A1 S-Line</span>
+              Car - <span className="text-[#ff4d30]">{car}</span>
             </h5>
-            <Image src={car1} alt="car_img" />
+            <Image className="w-full" src={carImgs[car]} alt="car_img" />
           </div>
         </div>
         <div className="flex flex-col p-[3rem]">
@@ -195,7 +215,7 @@ const BookingModel = () => {
             Personal Information
           </h4>
           <form className="info-form">
-            <div className="grid grid-cols-2 gap-[2rem] py-[1rem]">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-[2rem] py-[1rem]">
               <div className="flex flex-col gap-[.4rem]">
                 <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
                   First Name <b className="text-[#ff4d30]">*</b>
@@ -266,7 +286,7 @@ const BookingModel = () => {
                 <span className="leading-normal">This field is required.</span>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-[2rem] py-[1rem]">
+            <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-[2rem] py-[1rem]">
               <div className="flex flex-col gap-[.4rem]">
                 <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
                   City <b className="text-[#ff4d30]">*</b>
@@ -296,8 +316,14 @@ const BookingModel = () => {
                 Please send me latest news and updates
               </h5>
             </div>
-            <div className="bg-[#dbdbdb] p-[3rem] text-end mx-[-3rem]">
-              <button className="bg-[#ff4d30] border border-[#ff0] text-white text-[2.4rem] font-bold py-[1.2rem] px-[2rem] transition-colors duration-200 hover:bg-[#fe3516]">
+            <div className="bg-[#dbdbdb] p-[3rem] text-end max-sm:text-center mx-[-3rem]">
+              <button
+                onClick={() => {
+                  setShowBook();
+                  setSuccess();
+                }}
+                className="bg-[#ff4d30] border border-[#ff0] text-white text-[2.4rem] font-bold py-[1.2rem] px-[2rem] transition-colors duration-200 hover:bg-[#fe3516]"
+              >
                 Reserve Now
               </button>
             </div>

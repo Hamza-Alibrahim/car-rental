@@ -16,12 +16,12 @@ const Book = () => {
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    // if (!car || !pickUpDate || !pickUpPlace || !dropOfDate || !dropOfPlace)
-    //   setError(true);
-    // else {
-    setError(false);
-    setShowBook(true);
-    // }
+    if (!car || !pickUpDate || !pickUpPlace || !dropOfDate || !dropOfPlace)
+      setError(true);
+    else {
+      setError(false);
+      setShowBook(true);
+    }
   }
   document.body.style.overflow = showBook ? "hidden" : "auto";
   return (
@@ -111,13 +111,13 @@ const Book = () => {
                 onChange={(e) => setCar(e.target.value)}
                 className="border border-[#ccd7e6] rounded-[.3rem] text-[#ababab] text-[1.5rem] font-normal outline-0 py-[1.2rem] px-[1.3rem]"
               >
-                <option>Select your car type</option>
-                <option value="Audi A1 S-Line">Audi A1 S-Line</option>
-                <option value="VW Golf 6">VW Golf 6</option>
-                <option value="Toyota Camry">Toyota Camry</option>
-                <option value="BMW 320 ModernLine">BMW 320 ModernLine</option>
-                <option value="Mercedes-Benz GLK">Mercedes-Benz GLK</option>
-                <option value="VW Passat CC">VW Passat CC</option>
+                <option value="">Select your car type</option>
+                <option>Audi A1 S-Line</option>
+                <option>VW Golf 6</option>
+                <option>Toyota Camry</option>
+                <option>BMW 320 ModernLine</option>
+                <option>Mercedes-Benz GLK</option>
+                <option>VW Passat CC</option>
               </select>
             </div>
             <div className="flex flex-col">
@@ -146,7 +146,7 @@ const Book = () => {
                 onChange={(e) => setPickUpPlace(e.target.value)}
                 className="border border-[#ccd7e6] rounded-[.3rem] text-[#ababab] text-[1.5rem] font-normal outline-0 py-[1.2rem] px-[1.3rem]"
               >
-                <option>Select pick up location</option>
+                <option value="">Select pick up location</option>
                 <option>Belgrade</option>
                 <option>Novi Sad</option>
                 <option>Nis</option>
@@ -180,7 +180,7 @@ const Book = () => {
                 onChange={(e) => setDropOfPlace(e.target.value)}
                 className="border border-[#ccd7e6] rounded-[.3rem] text-[#ababab] text-[1.5rem] font-normal outline-0 py-[1.2rem] px-[1.3rem]"
               >
-                <option>Select drop off location</option>
+                <option value="">Select drop off location</option>
                 <option>Novi Sad</option>
                 <option>Belgrade</option>
                 <option>Nis</option>
@@ -260,7 +260,17 @@ const Book = () => {
             </button>
           </form>
         </div>
-        {showBook && <BookingModel />}
+        {showBook && (
+          <BookingModel
+            car={car}
+            pickUpDate={pickUpDate}
+            pickUpPlace={pickUpPlace}
+            dropOfDate={dropOfDate}
+            dropOfPlace={dropOfPlace}
+            setShowBook={() => setShowBook(false)}
+            setSuccess={() => setSuccess(true)}
+          />
+        )}
       </div>
     </section>
   );

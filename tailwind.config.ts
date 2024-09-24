@@ -21,6 +21,10 @@ const config: Config = {
         "xlink-hover": "0 10px 15px 0 rgba(255,83,48,.6)",
         book: "0 10px 20px 0 rgba(0,0,0,.1)",
       },
+      screens: {
+        sm: "650px",
+        md: "830px",
+      },
     },
   },
   plugins: [],
