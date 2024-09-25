@@ -19,11 +19,13 @@ const config: Config = {
         book: "0 10px 20px 0 rgba(0,0,0,.1)",
       },
       screens: {
+        xsm: "567px",
         sm: "650px",
         md: "830px",
       },
       fontFamily: {
         poppins: "Poppins, sans-serif",
+        rubik: "Rubik, sans-serif",
       },
     },
     keyframes: {

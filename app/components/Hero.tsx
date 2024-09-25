@@ -17,11 +17,11 @@ const Hero = () => {
             <p className="text-[2.2rem] font-bold  text-[#010103]">
               Plan your trip now
             </p>
-            <h1 className="text-[5.2rem] font-bold leading-[6.2rem] mt-[1rem] mb-[2.3rem] text-[#010103]">
+            <h1 className="text-[5.2rem] font-bold leading-[1.2] mt-[1rem] mb-[2.3rem] text-[#010103]">
               Save <span className="text-[#ff4d30]">big</span> with our car
               rental
             </h1>
-            <p className="text-[#706f7b] text-[1.6rem] mb-[4rem] leading-[2.6rem]">
+            <p className="text-[#706f7b] text-[1.6rem] mb-[4rem] leading-[1.6]">
               Rent the car of your dreams. Unbeatable prices, unlimited miles,
               flexible pick-up options and much more.
             </p>
