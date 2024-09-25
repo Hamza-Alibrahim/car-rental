@@ -1,10 +1,10 @@
 /* eslint-disable import/no-anonymous-default-export */
-import car1 from "./imgs/car1.jpg";
-import car2 from "./imgs/car2.jpg";
-import car3 from "./imgs/car3.jpg";
-import car4 from "./imgs/car4.jpg";
-import car5 from "./imgs/car5.jpg";
-import car6 from "./imgs/car6.jpg";
+import car1 from "../imgs/car1.jpg";
+import car2 from "../imgs/car2.jpg";
+import car3 from "../imgs/car3.jpg";
+import car4 from "../imgs/car4.jpg";
+import car5 from "../imgs/car5.jpg";
+import car6 from "../imgs/car6.jpg";
 
 export default {
   ["Audi A1 S-Line" as string]: car1,

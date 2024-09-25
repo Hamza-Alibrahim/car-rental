@@ -5,16 +5,16 @@ import Link from "next/link";
 
 const Hero = () => {
   return (
-    <main className="relative h-[97vh] bg-[#f8f8f8]">
+    <main className="relative h-[max(800px,97vh)] bg-[#f8f8f8]">
       <Image
         className="absolute right-0 top-0 max-[800px]:hidden"
         src={hero_bg}
         alt="Background Image"
       />
-      <div className="css-container">
-        <div className="flex items-center max-[800px]:justify-center max-[800px]:text-center relative h-screen">
+      <div className="css-container h-full">
+        <div className="flex items-center max-[800px]:justify-center max-[800px]:text-center relative h-full">
           <div className="max-w-[50rem] mt-[5rem] relative z-10">
-            <p className="text-[2.2rem] font-bold leading-normal text-[#010103]">
+            <p className="text-[2.2rem] font-bold  text-[#010103]">
               Plan your trip now
             </p>
             <h1 className="text-[5.2rem] font-bold leading-[6.2rem] mt-[1rem] mb-[2.3rem] text-[#010103]">

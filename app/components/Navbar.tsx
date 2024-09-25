@@ -56,37 +56,37 @@ const Navbar = () => {
             </svg>
           </span>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/"
           >
             Home
           </Link>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/about"
           >
             About
           </Link>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/models"
           >
             <span className="max-lg:hidden">Vehicle</span> Models
           </Link>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/testimonials"
           >
             Testimonials
           </Link>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/team"
           >
             Our Team
           </Link>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/contact"
           >
             Contact
@@ -94,13 +94,13 @@ const Navbar = () => {
         </nav>
         <div className="flex items-center gap-[2.5rem] max-lg:hidden">
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal hover:text-[#ff4d30] transition-colors duration-300"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  hover:text-[#ff4d30] transition-colors duration-300"
             href="/"
           >
             Sign In
           </Link>
           <Link
-            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium leading-normal text-white rounded-[.3rem] bg-[#ff4d30] py-[1.5rem] px-[3rem] shadow-link transition-[box-shadow,background-color] duration-300 hover:bg-[#fa4226] hover:shadow-link-hover"
+            className="text-[1.6rem] max-lg:text-[2.3rem] font-medium  text-white rounded-[.3rem] bg-[#ff4d30] py-[1.5rem] px-[3rem] shadow-link transition-[box-shadow,background-color] duration-300 hover:bg-[#fa4226] hover:shadow-link-hover"
             href="/"
           >
             Register

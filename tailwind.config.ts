@@ -12,9 +12,6 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
-      lineHeight: {
-        normal: "normal",
-      },
       boxShadow: {
         link: "0 10px 15px 0 rgba(255,83,48,.35)",
         "link-hover": "0 10px 15px 0 rgba(255,83,48,.5)",
@@ -24,6 +21,15 @@ const config: Config = {
       screens: {
         sm: "650px",
         md: "830px",
+      },
+      fontFamily: {
+        poppins: "Poppins, sans-serif",
+      },
+    },
+    keyframes: {
+      spin: {
+        "0%": { transform: "rotate(0deg)" },
+        "100%": { transform: "rotate(360deg)" },
       },
     },
   },

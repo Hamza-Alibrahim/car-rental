@@ -25,7 +25,10 @@ const Book = () => {
   }
   document.body.style.overflow = showBook ? "hidden" : "auto";
   return (
-    <section className="bg-[linear-gradient(180deg,#f8f8f8_20%,#fff_80%)]">
+    <section
+      className="bg-[linear-gradient(180deg,#f8f8f8_20%,#fff_80%)]"
+      id="booking-section"
+    >
       <div className="css-container">
         <div className="relative mb-[10rem] shadow-book rounded-[.5rem] text-[#010103] p-[5rem] max-sm:p-[2rem] flex flex-col w-full z-10 bg-white">
           <Image
@@ -33,9 +36,7 @@ const Book = () => {
             src={book_bg}
             alt="Background Image"
           />
-          <h2 className="text-[2.4rem] font-bold mb-[2.7rem] leading-normal">
-            Book a car
-          </h2>
+          <h2 className="text-[2.4rem] font-bold mb-[2.7rem] ">Book a car</h2>
           {success && (
             <div className="flex items-center justify-between bg-[#c3fabe] text-[#2a6817] rounded-[.8rem] text-[1.6rem] font-medium py-[1rem] px-[1.4rem] -mt-[1rem] mb-[1.8rem]">
               Check your email to confirm an order.{" "}
@@ -88,7 +89,7 @@ const Book = () => {
             className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-[2rem]"
           >
             <div className="flex flex-col">
-              <label className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] leading-normal">
+              <label className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -121,7 +122,7 @@ const Book = () => {
               </select>
             </div>
             <div className="flex flex-col">
-              <label className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] leading-normal">
+              <label className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -155,7 +156,7 @@ const Book = () => {
               </select>
             </div>
             <div className="flex flex-col">
-              <label className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] leading-normal">
+              <label className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] ">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -190,7 +191,7 @@ const Book = () => {
             </div>
             <div className="flex flex-col">
               <label
-                className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] leading-normal"
+                className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] "
                 htmlFor="picktime"
               >
                 <svg
@@ -222,7 +223,7 @@ const Book = () => {
             </div>
             <div className="flex flex-col">
               <label
-                className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] leading-normal"
+                className="flex items-center text-[1.6rem] font-semibold mb-[1.2rem] "
                 htmlFor="droptime"
               >
                 <svg
@@ -253,7 +254,7 @@ const Book = () => {
               />
             </div>
             <button
-              className="text-white font-medium text-[1.8rem] bg-[#ff4d30] border-2 border-[#ff4d30] rounded-[.3rem] shadow-link p-[1.1rem] transition-[box-shadow,background-color] duration-300 hover:shadow-xlink-hover hover:bg-[#fa4226] w-full self-end leading-normal"
+              className="text-white font-medium text-[1.8rem] bg-[#ff4d30] border-2 border-[#ff4d30] rounded-[.3rem] shadow-link p-[1.1rem] transition-[box-shadow,background-color] duration-300 hover:shadow-xlink-hover hover:bg-[#fa4226] w-full self-end "
               type="submit"
             >
               Search

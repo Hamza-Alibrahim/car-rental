@@ -7,11 +7,13 @@
 * {
   scrollbar-color: #ff4d30 #fff;
   scrollbar-width: thin;
+  line-height: normal;
 }
 
 html {
   font-size: 10px;
   scroll-behavior: smooth;
+  scroll-padding: 30px;
 }
 
 body {

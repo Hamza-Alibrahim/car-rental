@@ -3,6 +3,7 @@ import Book from "./components/Book";
 import GoUp from "./components/GoUp";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
+import Pick from "./components/Pick";
 import Plan from "./components/Plan";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <Book />
       <Plan />
+      <Pick />
       <Banner />
     </>
   );

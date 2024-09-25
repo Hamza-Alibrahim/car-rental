@@ -1,5 +1,5 @@
 import Image from "next/image";
-import carImgs from "../carImages";
+import carImgs from "../data/carImages";
 interface Props {
   car: string;
   pickUpDate: string;
@@ -27,7 +27,7 @@ const BookingModel = ({
       />
       <div className="fixed bg-white border-2 border-white text-[#010103] flex flex-col h-screen left-1/2 top-[54%] overflow-x-hidden overflow-y-scroll pr-[.2rem] md:-translate-x-1/2 md:-translate-y-1/2 w-full max-w-[83rem] max-md:top-0 max-md:left-0 z-[999]">
         <div className="flex items-center justify-between bg-[#ff4d30] text-white py-[1rem] px-[1.5rem]">
-          <h1 className="text-[2.4rem] uppercase font-bold leading-normal">
+          <h1 className="text-[2.4rem] uppercase font-bold ">
             Complete Reservation
           </h1>
           <span onClick={setShowBook} className="cursor-pointer">
@@ -49,7 +49,7 @@ const BookingModel = ({
           </span>
         </div>
         <div className="flex flex-col gap-[1.5rem] py-[2rem] px-[3rem] bg-[#ffeae6]">
-          <h3 className="flex gap-[.5rem] leading-normal text-[#ff4d30] text-[1.9rem] font-bold">
+          <h3 className="flex gap-[.5rem]  text-[#ff4d30] text-[1.9rem] font-bold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -78,7 +78,7 @@ const BookingModel = ({
         <div className="grid grid-cols-2 max-sm:grid-cols-1 p-[3rem] border-b border-[#7878789f]">
           <div className="flex flex-col max-sm:items-center gap-[3.2rem]">
             <div className="flex flex-col gap-[2rem]">
-              <h5 className="text-[#ff4d30] text-[1.8rem] font-bold leading-normal">
+              <h5 className="text-[#ff4d30] text-[1.8rem] font-bold ">
                 Location &amp; Date
               </h5>
               <div className="flex gap-[1rem]">
@@ -101,10 +101,10 @@ const BookingModel = ({
                   ></path>
                 </svg>
                 <div>
-                  <h6 className="text-[1.5rem] leading-normal font-bold mb-[.2rem]">
+                  <h6 className="text-[1.5rem]  font-bold mb-[.2rem]">
                     Pick-Up Date &amp; Time
                   </h6>
-                  <h5 className="text-[1.6rem] text-[#777] leading-normal">
+                  <h5 className="text-[1.6rem] text-[#777] ">
                     {pickUpDate} /{" "}
                     <input
                       type="time"
@@ -134,10 +134,10 @@ const BookingModel = ({
                 ></path>
               </svg>
               <div>
-                <h6 className="text-[1.5rem] leading-normal font-bold mb-[.2rem]">
+                <h6 className="text-[1.5rem]  font-bold mb-[.2rem]">
                   Drop-Off Date &amp; Time
                 </h6>
-                <h5 className="text-[1.6rem] text-[#777] leading-normal">
+                <h5 className="text-[1.6rem] text-[#777] ">
                   {dropOfDate} /{" "}
                   <input
                     type="time"
@@ -166,12 +166,10 @@ const BookingModel = ({
                 ></path>
               </svg>
               <div>
-                <h6 className="text-[1.5rem] leading-normal font-bold mb-[.2rem]">
+                <h6 className="text-[1.5rem]  font-bold mb-[.2rem]">
                   Pick-Up Location
                 </h6>
-                <h5 className="text-[1.6rem] text-[#777] leading-normal">
-                  {pickUpPlace}
-                </h5>
+                <h5 className="text-[1.6rem] text-[#777] ">{pickUpPlace}</h5>
               </div>
             </div>
             <div className="flex gap-[1rem]">
@@ -194,30 +192,28 @@ const BookingModel = ({
                 ></path>
               </svg>
               <div>
-                <h6 className="text-[1.5rem] leading-normal font-bold mb-[.2rem]">
+                <h6 className="text-[1.5rem]  font-bold mb-[.2rem]">
                   Drop-Off Location
                 </h6>
-                <h5 className="text-[1.6rem] text-[#777] leading-normal">
-                  {dropOfPlace}
-                </h5>
+                <h5 className="text-[1.6rem] text-[#777] ">{dropOfPlace}</h5>
               </div>
             </div>
           </div>
           <div className="flex flex-col max-sm:items-center max-sm:mt-[3.5rem] gap-[3rem]">
-            <h5 className="text-[1.8rem] leading-normal font-bold">
+            <h5 className="text-[1.8rem]  font-bold">
               Car - <span className="text-[#ff4d30]">{car}</span>
             </h5>
             <Image className="w-full" src={carImgs[car]} alt="car_img" />
           </div>
         </div>
         <div className="flex flex-col p-[3rem]">
-          <h4 className="text-[#ff4d30] mb-[2rem] text-[1.8rem] leading-normal font-bold uppercase">
+          <h4 className="text-[#ff4d30] mb-[2rem] text-[1.8rem]  font-bold uppercase">
             Personal Information
           </h4>
           <form className="info-form">
             <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-[2rem] py-[1rem]">
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   First Name <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -225,10 +221,10 @@ const BookingModel = ({
                   type="text"
                   placeholder="Enter your first name"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   Last Name <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -236,10 +232,10 @@ const BookingModel = ({
                   type="text"
                   placeholder="Enter your last name"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   Phone Number <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -247,10 +243,10 @@ const BookingModel = ({
                   type="tel"
                   placeholder="Enter your phone number"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   Age <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -259,12 +255,12 @@ const BookingModel = ({
                   placeholder="18"
                   min={16}
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-[2rem] py-[1rem]">
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   Email <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -272,10 +268,10 @@ const BookingModel = ({
                   type="email"
                   placeholder="Enter your email address"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   Address <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -283,12 +279,12 @@ const BookingModel = ({
                   type="text"
                   placeholder="Enter your street address"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
             </div>
             <div className="grid grid-cols-2 max-sm:grid-cols-1 gap-[2rem] py-[1rem]">
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   City <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -296,10 +292,10 @@ const BookingModel = ({
                   type="text"
                   placeholder="Enter your city"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
               <div className="flex flex-col gap-[.4rem]">
-                <label className="text-[1.6rem] font-medium text-[#777] leading-normal">
+                <label className="text-[1.6rem] font-medium text-[#777] ">
                   Zip Code <b className="text-[#ff4d30]">*</b>
                 </label>
                 <input
@@ -307,12 +303,12 @@ const BookingModel = ({
                   type="text"
                   placeholder="Enter your zip code"
                 />
-                <span className="leading-normal">This field is required.</span>
+                <span className="">This field is required.</span>
               </div>
             </div>
             <div className="flex gap-[1rem] items-center mt-[2rem] mb-[3rem]">
               <input className="h-[1.6rem] w-[1.6rem]" type="checkbox" />
-              <h5 className="text-[1.6rem] text-[#565454] leading-normal">
+              <h5 className="text-[1.6rem] text-[#565454] ">
                 Please send me latest news and updates
               </h5>
             </div>

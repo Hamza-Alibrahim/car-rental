@@ -8,10 +8,8 @@ const Plan = () => {
     <section className="relative z-10 py-[5.3rem]">
       <div className="css-container">
         <div className="w-fit mx-auto text-center">
-          <p className="text-[2.4rem] font-medium leading-normal">
-            Plan your trip now
-          </p>
-          <h1 className="text-[4.2rem] font-bold leading-normal mt-[1.3rem] mb-[3rem]">
+          <p className="text-[2.4rem] font-medium ">Plan your trip now</p>
+          <h1 className="text-[4.2rem] font-bold  mt-[1.3rem] mb-[3rem]">
             Quick & easy car rental
           </h1>
         </div>

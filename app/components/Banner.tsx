@@ -5,7 +5,7 @@ const Banner = () => {
         <h1 className="text-[5.2rem] font-bold leading-[6.2rem] max-[550px]:text-[4.2rem] max-[550px]:leading-[5.5rem]">
           Save big with our cheap car rental!
         </h1>
-        <h3 className="text-[2.4rem] font-normal leading-normal max-[550px]:text-[2rem]">
+        <h3 className="text-[2.4rem] font-normal  max-[550px]:text-[2rem]">
           Top Airports. Local Suppliers.{" "}
           <span className="text-[#ff4d30]">24/7</span> Support.
         </h3>
