@@ -18,6 +18,7 @@ const config: Config = {
         "xlink-hover": "0 10px 15px 0 rgba(255,83,48,.6)",
         book: "0 10px 20px 0 rgba(0,0,0,.1)",
         experiences: "0 20px 40px 0 rgba(0,0,0,.08)",
+        lg: "0 10px 15px 0 rgb(0 0 0 / 0.1)",
       },
       screens: {
         xsm: "567px",
