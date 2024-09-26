@@ -3,6 +3,7 @@ import Book from "./components/Book";
 import Choose from "./components/Choose";
 import Download from "./components/Download";
 import FAQ from "./components/FAQ";
+import Footer from "./components/Footer";
 import GoUp from "./components/GoUp";
 import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
@@ -24,6 +25,7 @@ export default function Home() {
       <Testimonials />
       <FAQ />
       <Download />
+      <Footer />
     </>
   );
 }
