@@ -12,7 +12,7 @@ const FAQ = () => {
   return (
     <section className="py-[10rem] relative text-[#010103]">
       <Image
-        className="absolute left-0 bottom-0 -z-10"
+        className="absolute left-0 bottom-[15%] -z-10"
         src={car}
         alt="Background Image"
       />
@@ -22,7 +22,7 @@ const FAQ = () => {
           <h2 className="text-[4.2rem] font-bold mb-[1.7rem]">
             Frequently Asked Questions
           </h2>
-          <p className="text-[#706f7b] text-[1.6rem] font-normal">
+          <p className="text-[#706f7b] text-[1.6rem] font-normal font-poppins">
             Frequently Asked Questions About the Car Rental Booking Process on
             Our Website: Answers to Common Concerns and Inquiries.
           </p>

@@ -1,6 +1,7 @@
 import Banner from "./components/Banner";
 import Book from "./components/Book";
 import Choose from "./components/Choose";
+import Download from "./components/Download";
 import FAQ from "./components/FAQ";
 import GoUp from "./components/GoUp";
 import Hero from "./components/Hero";
@@ -22,6 +23,7 @@ export default function Home() {
       <Choose />
       <Testimonials />
       <FAQ />
+      <Download />
     </>
   );
 }
