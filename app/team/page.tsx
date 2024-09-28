@@ -1,19 +1,19 @@
 import Background from "../components/Background";
 import BookBanner from "../components/BookBanner";
-import Card from "../components/Card";
 import Footer from "../components/Footer";
 import GridCard from "../components/GridCard";
 import Navbar from "../components/Navbar";
-import carsDetails from "../data/carsDetails";
+import PersonCard from "../components/PersonCard";
+import teamData from "../data/teamData";
 
 const page = () => {
   return (
     <>
       <Navbar />
-      <Background section="Vehicle Models" />
+      <Background section="Our Team" />
       <GridCard>
-        {carsDetails.map((car) => {
-          return <Card key={car.id} {...car} />;
+        {teamData.map((person) => {
+          return <PersonCard key={person.id} {...person} />;
         })}
       </GridCard>
       <BookBanner />
