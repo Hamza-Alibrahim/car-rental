@@ -3,22 +3,31 @@ import { useEffect, useState } from "react";
 
 const GoUp = () => {
   const [show, setShow] = useState(false);
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      if (window.scrollY > window.innerHeight && !show) setShow(true);
-      else if (window.scrollY < window.innerHeight && show) setShow(false);
-    });
 
-    return () =>
-      window.removeEventListener("scroll", () => {
-        if (window.scrollY > window.innerHeight && !show) setShow(true);
-        else if (window.scrollY < window.innerHeight && show) setShow(false);
-      });
-  });
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined") {
+        if (window.scrollY > window.innerHeight && !show) {
+          setShow(true);
+        } else if (window.scrollY < window.innerHeight && show) {
+          setShow(false);
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [show]);
+
   if (!show) return null;
+
   return (
     <span
       onClick={() =>
+        typeof window !== "undefined" && // Check if window is defined before using it
         window.scrollTo({
           top: 0,
           behavior: "smooth",
@@ -30,4 +39,5 @@ const GoUp = () => {
     </span>
   );
 };
+
 export default GoUp;

@@ -23,7 +23,9 @@ const Book = () => {
       setShowBook(true);
     }
   }
-  document.body.style.overflow = showBook ? "hidden" : "auto";
+  if (typeof document !== "undefined") {
+    document.body.style.overflow = showBook ? "hidden" : "auto";
+  }
   return (
     <section
       className="bg-[linear-gradient(180deg,#f8f8f8_20%,#fff_80%)]"
